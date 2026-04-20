@@ -54,6 +54,7 @@ public class NeighborhoodLibrary {
             // Switch/Case
             switch (command) {
                 case 1:
+                    listAvailableBooks();
                     break;
                 case 2:
                     break;
@@ -66,6 +67,18 @@ public class NeighborhoodLibrary {
                     break;
             }
 
+        }
+    }
+
+    public static void listAvailableBooks() {
+
+        //Header
+        System.out.println("Books Available: ");
+        // Iterate over array of books and print book details.
+        for (Book b: books) {
+                if (!b.isCheckedOut()){
+                    System.out.println(b.getTitle());
+            }
         }
     }
 }
@@ -103,18 +116,5 @@ public class NeighborhoodLibrary {
 //        // boolean variable checkout to true
 //        boolean isOut = true;
 //
-//public static void listAvailableBooks(){
-//        //Header
-//    System.out.println("Books Available: ");
-//    boolean isOut;
-//    // Iterate over array of books and print book details.
-//    do {
-//        System.out.println("Books Available: ");
-//        isOut = true;
-//    }while (isOut = true);
-//    for (int i = 0; i < numBooks ; i++) {
-//        System.out.println(books[i]);
-//    }
-//
 //}
-//}
+
